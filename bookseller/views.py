@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from bookseller.forms import BookForm, ActorForm
+from bookseller.forms import BookForm, CustomerForm
 from bookseller.models import Book, Customer
 
 
