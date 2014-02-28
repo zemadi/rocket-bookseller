@@ -7,7 +7,7 @@ class Book(models.Model):
     isbn = models.CharField(max_length=15)
 
     def __unicode__(self):
-        return self.name
+        return self.title
 
 class Customer(models.Model):
     first_name = models.CharField(max_length=100)

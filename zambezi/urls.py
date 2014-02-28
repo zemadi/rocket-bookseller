@@ -1,9 +1,12 @@
 from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
+
 admin.autodiscover()
 
-   url(r'^$', 'bookseller.views.home', name='home'),
+urlpatterns = patterns('',
+
+    url(r'^$', 'bookseller.views.home', name='home'),
 
     url(r'^books$', 'bookseller.views.books', name='books'),
     url(r'^books/new$', 'bookseller.views.new_book', name='new_book'),
@@ -19,3 +22,4 @@ admin.autodiscover()
 
     url(r'^admin/', include(admin.site.urls)),
 )
+

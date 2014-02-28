@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Customers{% endblock %}
+{% block main %}
+<h1>Customer Records</h1>
+<ul>
+    {% for customer in customers %}
+        <li><a href="{% url "view_customer" customer.id %}">{{ customer.first_name}} {{customer.last_name }}</a></li>
+    {% endfor %}
+</ul>
+<br>
+<a href="{% url "new_customer" %}">Add new customer</a>
+{% endblock %}

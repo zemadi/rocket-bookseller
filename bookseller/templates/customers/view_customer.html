@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}View customer{% endblock %}
+{% block main %}
+<h1>{{ customer.title }}</h1>
+Name: {{ customer.first_name }} {{ customer.last_name }}
+<br>
+Favorite book: {{ customer.favorite }}
+<br>
+<a href="{% url "edit_customer" customer.id %}">Edit customer</a>
+<br>
+<a href="{% url "delete_customer" customer.id %}">Delete customer</a>
+{% endblock %}
